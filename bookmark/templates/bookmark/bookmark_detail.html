@@ -1,1 +1,11 @@
 {% extends "common/base.html" %}
+
+{% block title %}북마크 상세{% endblock %}
+
+{% block content %}
+
+    <h1>Bookmark Detail</h1>
+
+    <p>사이트 : {{bookmark_detail.title}}</p>
+    <p>도메인 : <a href="http://{{bookmark_detail.url}}">{{bookmark_detail.url}}</a></p>
+{% endblock %}

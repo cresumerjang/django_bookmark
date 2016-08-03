@@ -1,1 +1,16 @@
 {% extends "common/base.html" %}
+{% load staticfiles %}
+{% block service_style %}{% static "style/list.css" %}{% endblock %}
+{% block title %}북마크 리스트{% endblock %}
+
+{% block content %}
+    <h1>Bookmark List</h1>
+
+    <ul>
+        {% for bookmark in bookmark_list %}
+        <li>
+            <a href="{% url 'bookmark:detail' bookmark.id %}">{{bookmark.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
