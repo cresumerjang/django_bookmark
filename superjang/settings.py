@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar', # pip3 install django-debug-toolbar
+    'bookmark.apps.BookmarkConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
