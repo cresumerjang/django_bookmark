@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.debug',
+    'debug_toolbar', # pip3 install django-debug-toolbar
 ]
 
 MIDDLEWARE_CLASSES = [
