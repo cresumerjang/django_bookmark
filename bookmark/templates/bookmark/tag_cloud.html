@@ -9,7 +9,7 @@
 {% block extrastyle %}{% static 'style/common/tag.css' %}{% endblock %}
 
 {% block content %}
-<h1>Blog Tag Cloud</h1>
+<h1>Bookmark Tag Cloud</h1>
 
 <!--# tagging패키지의 tag_cloud_for_model커스텀 태그를 사용해 태그 클라우드 표현방식 정의-->
 {% tag_cloud_for_model bookmark.Bookmark as tags with steps=6 min_count=1 distribution=log %}
