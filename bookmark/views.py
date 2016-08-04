@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView
 from bookmark.models import Bookmark
+
+class BookmarkMain(TemplateView):
+    template_name = 'bookmark/main.html'
 
 class BookmarkLV(ListView):
     model = Bookmark

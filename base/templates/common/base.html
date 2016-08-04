@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}BASE Template{% endblock %}</title>
-    <link rel="stylesheet" href="{% static "style/common.css" %}">
-    <link rel="stylesheet" href="{% block service_style %}{% endblock %}">
+    <link rel="stylesheet" href="{% static "style/common/common.css" %}">
+    {% block service_style %}{% endblock %}
 </head>
 <body>
 
