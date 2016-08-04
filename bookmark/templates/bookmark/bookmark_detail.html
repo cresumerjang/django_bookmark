@@ -1,4 +1,5 @@
 {% extends "common/base.html" %}
+{% load tagging_tags %}
 
 {% block title %}북마크 상세{% endblock %}
 
@@ -8,4 +9,16 @@
 
     <p>사이트 : {{bookmark_detail.title}}</p>
     <p>도메인 : <a href="http://{{bookmark_detail.url}}">{{bookmark_detail.url}}</a></p>
+
+
+    <div>
+        <p>TAG</p>
+        <p>
+            {% tags_for_object object as tags %}
+            {% for tag in tags %}
+            <a href="{% url 'bookmark:tag_object_list' tag.name %}">{{tag.name}}</a>
+            {% endfor %}
+            <a href="{% url 'bookmark:tag_cloud' %}">tag cloud</a>
+        </p>
+    </div>
 {% endblock %}

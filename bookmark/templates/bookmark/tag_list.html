@@ -1,0 +1,12 @@
+{% extends "common/base.html" %}
+{% load tagging_tags %}
+
+{% block title %} '{{tag.name}}'-Tag Post List {% endblock %}
+
+{% block content %}
+<h1>'{{tag.name}}'-Tag Post List</h1>
+
+{% for bookmark in object_list %}
+  <h2><a href="{% url 'bookmark:detail' bookmark.id %}">{{bookmark.title}}</a></h2>
+{% endfor %}
+{% endblock %}

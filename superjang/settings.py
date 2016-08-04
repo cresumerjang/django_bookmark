@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar', # pip3 install django-debug-toolbar
     'bookmark.apps.BookmarkConfig',
+    'tagging.apps.TaggingConfig', # pip3 install django-tagging
 ]
 
 MIDDLEWARE_CLASSES = [
